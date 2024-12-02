@@ -25,3 +25,9 @@ func Log(a ...any) (n int, err error) {
 	}
 	return fmt.Println(a...)
 }
+func LogF(format string, a ...any) (n int, err error) {
+	if !Verbose {
+		return 0, nil
+	}
+	return fmt.Printf(format, a...)
+}

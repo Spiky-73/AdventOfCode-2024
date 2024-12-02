@@ -1,3 +1,3 @@
-module github.com/Spiky-73/AdventOfCode-2024
+module aoc2024
 
 go 1.23.3
