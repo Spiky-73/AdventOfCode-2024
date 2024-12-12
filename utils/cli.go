@@ -2,7 +2,6 @@ package utils
 
 import (
 	"fmt"
-	"strconv"
 )
 
 var Verbose bool = false
@@ -10,13 +9,11 @@ var Part int = 1
 
 func ParseArgs(args []string) {
 	for i := 0; i < len(args); i++ {
-		if args[i] == "-p" {
-			Part, _ = strconv.Atoi((args[i+1]))
-			i++
-		} else if args[i] == "-v" {
+		if args[i] == "--part-two" || args[i] == "-t" {
+			Part = 2
+		} else if args[i] == "--verbose" || args[i] == "-v" {
 			Verbose = true
 		}
-
 	}
 }
 func Log(a ...any) (n int, err error) {
