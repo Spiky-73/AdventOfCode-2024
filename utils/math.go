@@ -1,5 +1,10 @@
 package utils
 
+type Point struct {
+	X int
+	Y int
+}
+
 func Abs(a int) int {
 	if a > 0 {
 		return a
@@ -14,4 +19,8 @@ func Max(a int, b int) int {
 	} else {
 		return b
 	}
+}
+
+func IsInside(x int, y int, w int, h int) bool {
+	return 0 <= x && x < w && 0 <= y && y < h
 }
